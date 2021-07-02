@@ -9,6 +9,42 @@
 #nickle.roll()                          #1
 #nickle.flip()                          #TAILS
 #nickle.roll_multiple(4)                #[1, 1, 2, 1]
+import array
+import random
+
+
+class Coin:
+    def __init__(self):
+        pass
+    def roll(self):
+        x = random.choice([True, False])
+        if x == True:
+            x = 1
+        else:
+            if x == False:
+                x = 2
+        return x
+    def flip(self):
+        x = random.choice([True, False])
+        if x == True:
+            x = "Heads"
+        else:
+            if x == False:
+                x = "Tails"
+        return x
+
+    def roll_multiple(self, n):
+
+            return n
 
 
 
+
+def main():
+
+    nickel = Coin()
+    print(nickel.roll())
+    print(nickel.flip())
+    print(nickel.roll_multiple(4))
+
+main()

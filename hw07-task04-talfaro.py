@@ -25,10 +25,9 @@ class Die:
             return i
 
     def roll_multiple(self,n):
-        x = [n]
-        for i 
-        return x
+         for i in range(n):
 
+            return n
 
 #        for i in range(1, n):
  #           while i < n:
