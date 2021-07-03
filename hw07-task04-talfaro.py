@@ -14,28 +14,21 @@ import random
 
 class Die:
     def __init__(self, n):
-        self.__n = n
+        self.n = n
 
     def get_sides(self, n):
         return n
 
     def roll_die(self, n):
-        for i in range(1,n):
-            i = random.randint(i,n)
-            return i
 
-    def roll_multiple(self,n):
-         for i in range(n):
+        return random.randint(1,n)
 
-            return n
 
-#        for i in range(1, n):
- #           while i < n:
-  #              i = random.randint(i, n)
-                #lst = [i]
-                #lst.append(random.randint(i, n))
-                #lst.append(random.randint(i, n))
-                #lst.append(random.randint(i, n))
+    def roll_multiple(self, n):
+        x = []
+        for i in range(0, n):
+            x.append(self.roll_die(n))
+        return x
 
 
 

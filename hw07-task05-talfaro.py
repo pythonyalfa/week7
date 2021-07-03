@@ -9,13 +9,14 @@
 #nickle.roll()                          #1
 #nickle.flip()                          #TAILS
 #nickle.roll_multiple(4)                #[1, 1, 2, 1]
-import array
+
 import random
 
 
 class Coin:
-    def __init__(self):
-        pass
+    def __init__(self, number):
+        self.number = number
+
     def roll(self):
         x = random.choice([True, False])
         if x == True:
@@ -24,6 +25,7 @@ class Coin:
             if x == False:
                 x = 2
         return x
+
     def flip(self):
         x = random.choice([True, False])
         if x == True:
@@ -33,16 +35,18 @@ class Coin:
                 x = "Tails"
         return x
 
-    def roll_multiple(self, n):
+    def roll_multiple(self, number):
+        rol_mul = []
+        for i in range(0, number):
+            rol_mul.append(self.roll())
 
-            return n
-
+        return rol_mul
 
 
 
 def main():
 
-    nickel = Coin()
+    nickel = Coin(0)
     print(nickel.roll())
     print(nickel.flip())
     print(nickel.roll_multiple(4))
